@@ -1,3 +1,7 @@
+# 1.1.3
+
+Bug fix for Windows installer
+
 # 1.1.2
 
 Add support for Red Hat 7.1 and later

@@ -4,9 +4,9 @@ maintainer_email 'acornies@gmail.com'
 license          'All rights reserved'
 description      'Installs/Configures dotnetcore'
 long_description 'Installs/Configures dotnetcore'
-version          '1.1.2'
+version          '1.1.3'
 
-depends 'apt', '~> 2.9.2'
+depends 'apt'
 depends 'tar'
 
 supports 'ubuntu', '= 14.04'
