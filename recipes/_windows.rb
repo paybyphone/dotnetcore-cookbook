@@ -17,5 +17,6 @@ packages.each do |k,v|
     source v
     installer_type :custom
     options '/s /v"/qn"'
+    returns [0, 42, 127, 1638]
   end
 end
