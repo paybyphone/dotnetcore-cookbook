@@ -3,7 +3,7 @@ require 'spec_helper'
 case os[:family]
 when 'windows'
 
-    describe package('Microsoft Dotnet CLI for Windows (1.0.0.001675 )') do
+    describe package('Microsoft .NET Core 1.0.5 - Runtime (x64)') do
         it { should be_installed }
     end
 
@@ -13,7 +13,7 @@ when 'windows'
 
 when 'ubuntu', 'debian'
 
-    describe package('dotnet-dev-1.0.0-preview2-003131') do
+    describe package('dotnet-dev-1.0.4') do
         it { should be_installed }
     end
 

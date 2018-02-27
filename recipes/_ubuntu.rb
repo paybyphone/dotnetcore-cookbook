@@ -12,15 +12,16 @@ unless %w(trusty xenial).include? node['lsb']['codename']
 end
 
 include_recipe 'apt::default' do
-    only_if { !node.has_recipe?('apt::default') }
+  only_if { !node.has_recipe?('apt::default') }
 end
 
 apt_repository 'dotnetdev' do
-    uri node['dotnetcore']['apt_package_source']
-    components ['main']
-    distribution node['lsb']['codename']
-    arch 'amd64'
-    key "#{node['dotnetcore']['apt_package_source']}/dists/#{node['lsb']['codename']}/Release.gpg"
+  uri node['dotnetcore']['apt_package_source']
+  components ['main']
+  distribution node['lsb']['codename']
+  arch 'amd64'
+  keyserver 'hkp://keyserver.ubuntu.com:80'
+  key       'B02C46DF417A0893'
 end
 
 package node['dotnetcore']['package']['name'] do
